@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<center>
+
+
+    <body>
+
+        <h1>Edit Data</h1>
+        <form action="/<%= Books.id %>/editBook" method="POST">
+            <div>
+                <label for="">Name</label><br>
+                <input type="text" name="name" id="" value="<%= Books.book_name %>">
+            </div><br />
+            <div>
+                <label for="">Author</label><br>
+                <input type="text" name="author" id="" value="<%= Books.author %>">
+            </div><br />
+            <div>
+                <label for="">Genre</label><br>
+                <select name="genre" id="">
+                    <option value="empty" <%=Books.genre=='empty' ? 'selected' : '' %>>--Select Option--
+                    </option>
+                    <option value="Novel" <%=Books.genre=='Novel' ? 'selected' : '' %>>Novel
+                    </option>
+                    <option value="Komedy" <%=Books.genre=='Komedi' ? 'selected' : '' %>>Komedi</option>
+                    <option value="Drama" <%=Books.genre=='Romance' ? 'selected' : '' %>>Romance</option>
+
+
+                </select>
+            </div>
+            <br />
+
+            <button type="submit">Update</button>
+            <button type="button"><a href="/listBook">Cancel</a></button>
+        </form>
+
+</center>
+
+</body>
+
+</html>
