@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Books</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>Admin Books List</h1>
+
+        <table border="1">
+            <tr>
+
+                <th>Judul Buku</th>
+                <th>Penulis</th>
+                <th>Genre</th>
+                <th>Pilihan</th>
+
+            </tr>
+            <% for(let i of data) { %>
+                <tr>
+                    <!-- <td>
+                    <%= i.id %>
+                </td> -->
+                    <td>
+                        <%= i.book_name %>
+                    </td>
+                    <td>
+                        <%= i.author %>
+                    </td>
+                    <td>
+                        <%= i.genre %>
+                    </td>
+
+                    <td>
+
+                        <a href="/<%= i.id %>/editBook"> Edit </a>
+                        <a href="/<%= i.id %>/deleteBook"> Delete</a>
+
+                    </td>
+                </tr>
+                <% } %>
+
+
+        </table>
+        <b><br /><br />
+
+            <h3><button> <a href="/addBook">Add Book</a></button></h3>
+
+            <h3><button><a href="/">Back</a></button></h3>
+        </b>
+    </center>
+</body>
+
+</html>

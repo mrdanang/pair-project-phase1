@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+<center>
+
+    <body>
+        <center>
+            <h1>Add Book</h1>
+            <form action="/addBook" method="POST">
+                <div>
+                    <label for="">Name</label><br>
+                    <input type="text" name="book_name" required
+                        oninvalid="this.setCustomValidity('kolom name harus diisi, tidak boleh kosong')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <div>
+                    <label for="">Author</label><br>
+                    <input type="text" name="author" required
+                        oninvalid="this.setCustomValidity('kolom harus diisi, tidak boleh kosong')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <div>
+                    <label for="">Genre</label><br>
+                    <select name="genre" id="">
+                        <option value="">--Select Option--</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Komedi">Komedi</option>
+                        <option value="Romance">Romance</option>
+
+                    </select>
+                    <br />
+
+
+                </div>
+                <br />
+                <button type="submit">Save</button>
+                <button type="button"><a href="/listBook">Cancel</a></button>
+            </form>
+        </center>
+    </body>
+
+</html>

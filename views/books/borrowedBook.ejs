@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Borrowed Books</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>List Borrowed Books</h1>
+
+        <table border="1">
+            <tr>
+
+                <th>Kode Buku</th>
+                <th>Mulai Pinjam</th>
+                <th>Tanggal Harus Mengembalikan</th>
+                <th>Option</th>
+
+
+            </tr>
+            <% for(let i of data) { %>
+                <tr>
+                    <td>
+                        <%= i.BookId %>
+                    </td>
+                    <td>
+                        <%= i.start_borrow_time %>
+                    </td>
+                    <td>
+                        <%= i.end_date %>
+                    </td>
+
+                    <td>
+
+
+                        <a href="/<%= i.id %>/deleteBook"> Cancel </a>
+
+                    </td>
+                </tr>
+                <% } %>
+
+
+        </table>
+        <b><br /><br />
+
+
+            <h3><button><a href="/">Back</a></button></h3>
+        </b>
+    </center>
+</body>
+
+</html>
